@@ -49,8 +49,7 @@ alert ('ssss');
         // Verificar si el producto ya está en el carrito
         const productoEnCarrito = carrito.find(producto => producto.id === producto.id);
         if (productoEnCarrito) {
-            alert("El producto ya está en el carrito.");
-        } else {
+            
             carrito.push(producto);
             localStorage.setItem('carrito', JSON.stringify(carrito)); // Guardar en localStorage
             alert("Producto agregado al carrito");
