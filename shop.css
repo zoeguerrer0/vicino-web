@@ -24,7 +24,10 @@
     box-shadow: 15px 15px 30px rgb(80, 79, 79),
                 -15px -15px 30px rgb(90, 89, 89);
   }
-/* Estilos del botón */
+  /*estilos carrito*/
+
+  
+/* Estilos del botón  */
 .dropdown {
   position: relative;
   display: inline-block;

@@ -1,4 +1,4 @@
-/*document.querySelector('.dropdown-carrito').addEventListener('click', function() {
+document.querySelector('.dropdown-carrito').addEventListener('click', function() {
     document.querySelector('.dropdown').classList.toggle('show');
 });
 
@@ -13,7 +13,7 @@ window.onclick = function(event) {
             }
         }
     }
-};*/
+};
 
 // Lista de productos
 let productos = [
