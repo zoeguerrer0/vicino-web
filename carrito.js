@@ -1,11 +1,11 @@
-document.querySelector('.dropdown-carrito').addEventListener('click', function() {
-    document.querySelector('.dropdown').classList.toggle('show');
+document.querySelector('.dropdown-toogle').addEventListener('click', function() {
+    document.querySelector('.dropdown-prod').classList.toggle('show');
 });
 
 // Cerrar el dropdown si el usuario hace clic fuera de él
 window.onclick = function(event) {
-    if (!event.target.matches('.dropdown-carrito')) {
-        var dropdowns = document.getElementsByClassName("dropdown-prod");
+    if (!event.target.matches('.dropdown-toogle')) {
+        var dropdowns = document.getElementsByClassName("dropdown-prod.show");
         for (var i = 0; i < dropdowns.length; i++) {
             var openDropdown = dropdowns[i];
             if (openDropdown.style.display == 'block') {
@@ -47,9 +47,8 @@ alert ('ssss');
         let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
         alert('eee');
         // Verificar si el producto ya está en el carrito
-        const productoEnCarrito = carrito.find(producto => producto.id === producto.id);
-        if (productoEnCarrito) {
-            
+        const productoEnCarrito = carrito.find(item => item.id === producto.id);
+        if (!productoEnCarrito) {
             carrito.push(producto);
             localStorage.setItem('carrito', JSON.stringify(carrito)); // Guardar en localStorage
             alert("Producto agregado al carrito");
@@ -78,7 +77,7 @@ function renderizarCarrito() {
             <td><div class="product-image"></div></td>
             <td>${producto.descripcion}</td>
             <td>$${producto.precio.toFixed(2)}</td>
-            <td><span class="remove" data-id="${producto.id}">X</span></td>
+            <td><span class="remove" data-id="${producto.id}"></span></td>
         `;
         tablaCarrito.appendChild(fila);
     });
@@ -86,3 +85,12 @@ function renderizarCarrito() {
 
 // Inicializar carrito
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+
+// Función para vaciar el carrito
+function vaciarCarrito() {
+    localStorage.removeItem('carrito'); // Eliminar el carrito del localStorage
+    renderizarCarrito(); // Llama a renderizarCarrito para actualizar la vista
+    alert("El carrito ha sido vaciado.");
+};
+document.getElementById('vaciar-carrito').addEventListener('click', vaciarCarrito);

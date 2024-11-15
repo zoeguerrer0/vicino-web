@@ -2,18 +2,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
   }
-  
-  body {
-    font-family: Arial, sans-serif;
-  }
+body{
+  background-image: url(/imagenes/fondo-login.png);
+}
   
   .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    background-color: #333;
+    background-color: #f7f5f5;
   }
   
   .logo img {
@@ -25,7 +26,56 @@
                 -15px -15px 30px rgb(90, 89, 89);
   }
   /*estilos carrito*/
+  .dropdown-carrito {
+    position: relative;
+    display: inline-block;
+}
+#boton-vaciar{
+  padding: 5px;
+  text-align: center;
+}
+.dropdown-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    background-color: #444343;
+}
 
+.dropdown-prod {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    background-color: rgb(65, 63, 63);
+    border: 1px solid #000000;
+    z-index: 1;
+    min-width: 200px; /* Ajusta según sea necesario */
+    
+}
+
+.dropdown-prod.show {
+    display: block; /* Mostrar cuando se activa */
+    background-color: #424242;
+}
+
+.dropdown-prod h1 {
+    margin: 0;
+    padding: 10px;
+    background-color: #f1f1f1; /* Color de fondo para el encabezado */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 8px;
+    border-bottom: 1px solid #747474;
+}
+
+.remove {
+    cursor: pointer;
+    color: red;
+}
   
 /* Estilos del botón  */
 .dropdown {
@@ -34,7 +84,7 @@
 }
 
 .dropdown-button {
-  background-color: #cac5c5; /* Color del botón */
+  background-color: #333030; /* Color del botón */
   color: rgb(51, 47, 47);
   padding: 10px 20px;
   font-size: 16px;
@@ -42,7 +92,7 @@
 }
 
 .dropdown-button:hover {
-  background-color: #c9c9c9; /* Color al pasar el mouse */
+  background-color: #363535; /* Color al pasar el mouse */
   border-color: #000;
 
 }
