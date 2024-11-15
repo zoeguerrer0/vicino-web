@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #333;
+}
+
+.logo img {
+  width: 50px;
+  border-radius: 5px;
+}
+.logo img:hover{
+  box-shadow: 15px 15px 30px rgb(80, 79, 79),
+              -15px -15px 30px rgb(90, 89, 89);
+}
+
+/* Estilos del botón */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  background-color: #cac5c5; /* Color del botón */
+  color: rgb(51, 47, 47);
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.dropdown-button:hover {
+  background-color: #c9c9c9; /* Color al pasar el mouse */
+  border-color: #000;
+
+}
+
+/* Contenido desplegable (oculto por defecto) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Enlaces dentro del desplegable */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #b8b1b1;
+}
+
+/* Mostrar el contenido desplegable cuando el contenedor tiene la clase 'show' */
+.dropdown.show .dropdown-content {
+  display: block;
+}
+
+
+.menu-toggle {
+  display: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+}
+
+.search-box input {
+  padding: 5px;
+  border: black;
+  border-radius: 5px;
+}
+
+.search-box button {
+  background-color: #333;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.search-box button i {
+  color: black;
+}
+.search-box img{
+  width: 20px;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      background-color: #333;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      text-align: center;
+  }
+
+  .nav-links li {
+      margin: 15px 0;
+  }
+
+  .menu-toggle {
+      display: block;
+  }
+}
+
+.card {
+  width: 200px;
+  height: 300px;
+  margin: 50px ;
+  margin-top: 200px;
+  border-radius: 20px;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25),
+              -15px -15px 30px rgb(60, 60, 60);
+            
+ }
+
+ #MM{
+  width: 200px;
+  height: 300px;
+  border-radius: 20px;
+ }
+ #MH{
+  width: 200px;
+  height: 300px;
+  border-radius: 20px;
+  
+ }
+ #MN{
+  width: 200px;
+  height: 300px;
+  border-radius: 20px;
+ }
+ .grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.grid-item {
+  background-color: #333;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  font-size: 1.5em;
+  border-radius: 10px;
+}
+ 
